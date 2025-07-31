@@ -1,0 +1,305 @@
+/* General Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A slightly more modern font */
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8; /* Light gray background for the entire page */
+}
+
+/* Header Section */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Increased horizontal padding */
+    background-color: #2c3e50; /* Darker header background */
+    color: #ecf0f1; /* Light text for better contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle box-shadow */
+}
+
+.website-title {
+    font-size: 2.5em; /* Larger title */
+    margin: 0;
+    letter-spacing: 1px; /* Slight letter spacing */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 10px 15px; /* More padding for input */
+    border: 1px solid #3498db; /* Blue border */
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #3498db; /* Blue button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.search-box button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.banner {
+    background-image: url('images/banner.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make sure it spans the full width */
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 60px 40px; /* More padding */
+    text-align: center;
+    background-color: #ecf0f1; /* Light background for welcome section */
+    border-radius: 8px; /* Rounded borders */
+    margin: 0 40px 30px 40px; /* Margins around the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.welcome-section h2 {
+    font-size: 2.2em;
+    color: #2c3e50; /* Matches header color */
+    margin-bottom: 15px;
+}
+
+.welcome-section p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto; /* Center paragraph */
+}
+
+/* Image Gallery Section */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Increased gap between items */
+    padding: 20px 40px 50px 40px; /* More padding */
+}
+
+.gallery-item {
+    position: relative;
+    flex: 1 1 280px; /* Adjusted flex-basis for slightly larger thumbnails */
+    max-width: 24%; /* Ensures four columns on larger screens */
+    border: 1px solid #ccc;
+    border-radius: 10px; /* More rounded borders */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for gallery images */
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(44, 62, 80, 0.8); /* Darker, semi-transparent background */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+}
+
+.gallery-item:hover .caption {
+    opacity: 1;
+}
+
+/* Content Sections */
+.content-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 40px; /* Increased padding */
+    margin-bottom: 30px;
+    background-color: #fff; /* White background for content sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.content-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-left,
+.content-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded image corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger image shadow */
+    opacity: 0.9; /* Slightly reduced opacity */
+    transition: opacity 0.3s ease; /* Smooth transition on hover */
+}
+
+.content-section img:hover {
+    opacity: 1;
+}
+
+.content-section h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #2c3e50; /* Matches header color */
+    color: #ecf0f1;
+    font-size: 0.9em;
+    margin-top: 50px; /* Space above footer */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .image-gallery .gallery-item {
+        max-width: 48%; /* Two columns on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .website-title {
+        margin-bottom: 10px;
+        font-size: 2em;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-box input {
+        flex-grow: 1;
+    }
+
+    .image-gallery .gallery-item {
+        max-width: 100%; /* Single column on small screens */
+    }
+
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .content-section.reverse {
+        flex-direction: column;
+    }
+
+    .welcome-section {
+        margin: 0 20px 30px 20px;
+        padding: 40px 20px;
+    }
+
+    .content-section {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-header {
+        padding: 15px;
+    }
+
+    .website-title {
+        font-size: 1.8em;
+    }
+
+    .search-box input,
+    .search-box button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .welcome-section {
+        padding: 30px 15px;
+        margin: 0 15px 25px 15px;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.8em;
+    }
+
+    .welcome-section p {
+        font-size: 1em;
+    }
+
+    .image-gallery {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .gallery-item img {
+        height: 150px;
+    }
+
+    .content-section {
+        padding: 25px 15px;
+        margin-bottom: 25px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .content-section h3 {
+        font-size: 1.5em;
+    }
+
+    .content-section p {
+        font-size: 0.95em;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
